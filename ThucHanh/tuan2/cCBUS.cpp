@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include<iostream>
+#include<algorithm>s
 using namespace std;
 
 const int N=35;
@@ -50,6 +51,7 @@ void TRY(int k){
 }
 
 int main(){
+    freopen("input.txt", "r", stdin);
     input();
     x[0]=0;
     TRY(1);
