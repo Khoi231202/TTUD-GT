@@ -2,10 +2,9 @@
 using namespace std;
 
 const int MAX =1e6;
-const int MOD = 1e9 + 7;
 int arr[MAX];
 int n;
-long long Q=0;
+
 void merge(int arr[], int l, int m, int r){
     int n1, n2;
     n1=m-l+1;
@@ -28,7 +27,6 @@ void merge(int arr[], int l, int m, int r){
         else if(R[j]<L[i]){
             arr[k]=R[j];
             j++;
-            Q= (Q+n1-i)%MOD;
         }
         k++;
     }
@@ -47,6 +45,10 @@ void merge(int arr[], int l, int m, int r){
 
 void mergeSort(int arr[], int l, int r){
     if(l<r){
+        for(int t=l; t<=r ;t++){
+            cout<< arr[t]<<' ';
+        }
+        cout<<endl;
         int m=l+(r-l)/2;
         mergeSort(arr,l,m);
         mergeSort(arr,m+1,r);
@@ -64,7 +66,7 @@ int main(){
     freopen("input.txt","r", stdin);
     input();
     mergeSort(arr, 0, n-1);
-    cout<<Q;
+    for(int i=0; i<n; i++)cout<<arr[i]<<' ';
     return 0;
 
 }
