@@ -19,6 +19,7 @@ bool P(int d) {
     return cnt >= C;
 }
 void solve(){
+    
     cin >> T;
     while (T--) {
         cin >> n >> C;
@@ -27,6 +28,7 @@ void solve(){
         int lo = 0, hi = x[n] - x[1];
         while(lo<hi-1){
             int mid= (lo + hi)/2;
+            // cout<<lo<<' '<<hi<<' '<<mid<<' ';
             if (P(mid)) lo=mid;
             else hi=mid -1;
         }
@@ -38,6 +40,7 @@ void solve(){
 }
 
 int main(){
+    // freopen("input.txt","r", stdin);
     solve();
     return 0;
 }

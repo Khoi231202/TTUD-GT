@@ -40,6 +40,7 @@ void bfs(){
     while(!q.empty()){
         int x=q.front().first;
         int y=q.front().second;
+        cout<<x<<' '<<y<<endl;
         q.pop();
         if(isBorder(x,y)){
             cout<<d[x][y]+1;
